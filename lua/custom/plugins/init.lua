@@ -3,11 +3,5 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-
   'mg979/vim-visual-multi', -- Multi-line editor plugin
-
-  {
-    'Exafunction/codeium.vim',
-    event = 'BufEnter',
-  },
 }
