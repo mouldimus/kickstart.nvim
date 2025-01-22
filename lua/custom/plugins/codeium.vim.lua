@@ -15,7 +15,7 @@ return {
         return vim.fn['codeium#Accept']()
       end, { desc = 'Accept codeium suggestion', expr = true })
 
-      vim.keymap.set('i', '<C-]>', function()
+      vim.keymap.set('i', '<C-l>', function()
         return vim.fn['codeium#Clear']()
       end, { desc = 'Clear codeium suggestion', expr = true })
 
@@ -25,13 +25,12 @@ return {
           vim.fn['codeium#Clear']()
         end,
       })
-
-      vim.keymap.set('i', '<C-c>', function()
-        return {
-          vim.fn['codeium#Clear'](),
-          vim.fn['execute'] 'stopinsert',
-        }
-      end, { desc = 'Clear codeium suggestion', expr = true })
     end,
+    vim.keymap.set('i', '<C-c>', function()
+      return {
+        vim.fn['execute'] 'stopinsert',
+        vim.fn['codeium#Clear'](),
+      }
+    end, { desc = 'Clear codeium suggestion', expr = true }),
   },
 }

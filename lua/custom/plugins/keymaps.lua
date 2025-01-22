@@ -11,7 +11,7 @@ return {
     { '<leader>p', group = '[P]review' },
   },
   vim.keymap.set('n', '<leader>ps', ':LivePreview start<CR>', { desc = 'Preview [s]tart' }),
-  vim.keymap.set('n', '<leader>po', ':LivePreview stop<CR>', { desc = 'Preview st[o]p' }),
+  vim.keymap.set('n', '<leader>pc', ':LivePreview close<CR>', { desc = 'Preview [c]lose' }),
   vim.keymap.set('n', '<leader>pp', ':LivePreview pick<CR>', { desc = 'Preview [p]ick' }),
   vim.keymap.set('n', '<leader>pt', ':Autosave toggle<CR>', { desc = '[T]oggle autosave' }),
 }
