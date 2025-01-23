@@ -8,7 +8,7 @@ return {
   'SmiteshP/nvim-navic',
   config = function()
     require('nvim-navic').setup {}
-    require('lspconfig').tsserver.setup {
+    require('lspconfig').ts_ls.setup {
       on_attach = function(client, bufnr)
         require('nvim-navic').attach(client, bufnr)
       end,

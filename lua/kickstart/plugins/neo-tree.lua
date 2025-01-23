@@ -30,7 +30,7 @@ return {
   },
   cmd = 'Neotree',
   keys = {
-    { '<leader>e', ':Neotree reveal<CR>', desc = 'Toggle [E]xplorer' },
+    { '<leader>e', ':Neotree toggle<CR>', desc = 'Toggle [E]xplorer' },
   },
   opts = {
     filesystem = {

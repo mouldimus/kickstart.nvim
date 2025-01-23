@@ -14,4 +14,10 @@ return {
   vim.keymap.set('n', '<leader>pc', ':LivePreview close<CR>', { desc = 'Preview [c]lose' }),
   vim.keymap.set('n', '<leader>pp', ':LivePreview pick<CR>', { desc = 'Preview [p]ick' }),
   vim.keymap.set('n', '<leader>pt', ':Autosave toggle<CR>', { desc = '[T]oggle autosave' }),
+
+  -- Telescope
+  vim.keymap.set('n', '<leader>gB', require('telescope.builtin').git_branches, { desc = 'switch [B]ranch' }),
+
+  -- Neo-Tree
+  vim.keymap.set('n', '<leader>gf', ':Neotree float git_status<CR>', { desc = 'Git [f]iles' }),
 }
