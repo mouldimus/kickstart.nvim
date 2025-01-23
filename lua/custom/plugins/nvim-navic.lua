@@ -4,15 +4,19 @@
 --
 -- Finish configuring nvim navic
 --
+
 return {
   'SmiteshP/nvim-navic',
   config = function()
-    require('nvim-navic').setup {}
-    require('lspconfig').ts_ls.setup {
-      on_attach = function(client, bufnr)
-        require('nvim-navic').attach(client, bufnr)
-      end,
+    require('nvim-navic').setup {
+      lsp = {
+        auto_attach = true,
+      },
+      highlight = true,
+      separator = ' > ',
     }
   end,
+  dependencies = {
+    'neovim/nvim-lspconfig',
+  },
 }
--- return {}
